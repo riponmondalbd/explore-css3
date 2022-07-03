@@ -8,17 +8,35 @@
 
     <style>
         @keyframes slider{
-            form{
+            0%{
                 background-color: limegreen;
-                left: 0px;
+                left: 0;
+                top: 0;
+                transform: scale(1);
             }
-            to{
+            25%{
+                top: 225px;
+                background-color: chocolate;
+                transform: scale(0.5);
+            }
+            50%{
+                top: 0;
+                background-color: crimson;
+                transform: scale(2);
+            }
+            75%{
+                top: 225px;
+                background-color: darkgreen;
+                transform: scale(0.5);
+            }
+            100%{
                 background-color: magenta;
-                left: 600px;
+                left: 800px;
+                top: 0;
             }
         }
         .stage{
-            width: 700px;
+            width: 900px;
             height: 300px;
             background-color: lightskyblue;
         }
@@ -28,7 +46,7 @@
             background-color: limegreen;
             border-radius: 50%;
             position: relative;
-            animation: slider 1s ease-in-out 0.5s infinite alternate;
+            animation: slider 2s ease-in-out 0.5s infinite alternate;
             animation-play-state: running;
         }
     </style>
